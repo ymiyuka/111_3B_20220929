@@ -1,42 +1,42 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Yo
 {
     /// <summary>
-    /// ²Ä¤@­Ó¸}¥»
+    /// ç¬¬ä¸€å€‹è…³æœ¬
     /// 2022.10.13
     /// </summary>
     public class FirstScript : MonoBehaviour
     {
-        #region ----µù¸Ñ°Ï°ì----
-        // ÁY±Æ §Ö±¶Áä : teb
-        // ®æ¦¡¤Æ¤å¦r §Ö±¶Áä : Ctrl + K D
+        #region ----è¨»è§£å€åŸŸ----
+        // ç¸®æ’ å¿«æ·éµ : teb
+        // æ ¼å¼åŒ–æ–‡å­— å¿«æ·éµ : Ctrl + K D
 
-        // ³æ¦æµù¸Ñ
-        /* ¦h¦æ
-         * µù¸Ñ
+        // å–®è¡Œè¨»è§£
+        /* å¤šè¡Œ
+         * è¨»è§£
          */
 
-        // A a ¤£¬Û¦Pªº¦r
+        // A a ä¸ç›¸åŒçš„å­—
         #endregion
 
-        #region ----¨Æ¥ó°Ï°ì----
-        //³ê¿ô¨Æ¥ó : ¹CÀ¸¶}©l®É°õ¦æ¤@¦¸
+        #region ----äº‹ä»¶å€åŸŸ----
+        //å–šé†’äº‹ä»¶ : éŠæˆ²é–‹å§‹æ™‚åŸ·è¡Œä¸€æ¬¡
         private void Awake()
         {
-            print("«¢Åo¡A¨U¼w :D");
+            print("å“ˆå›‰ï¼Œæ²ƒå¾· :D");
         }
-        //¶}©l¨Æ¥ó : awake «á°õ¦æ¤@¦¸
+        //é–‹å§‹äº‹ä»¶ : awake å¾ŒåŸ·è¡Œä¸€æ¬¡
         private void Start()
         {
-            print("<color=yellow>¶}©l¨Æ¥ó</color>");
+            print("<color=yellow>é–‹å§‹äº‹ä»¶</color>");
         }
         private void Update()
         {
-            //§ó·s¨Æ¥ó : strat ¤§«á°õ¦æ¡A°õ¦æ¬ù 60 FPS
-            print("<color=green>§ó·s¨Æ¥ó</color>");
+            //æ›´æ–°äº‹ä»¶ : strat ä¹‹å¾ŒåŸ·è¡Œï¼ŒåŸ·è¡Œç´„ 60 FPS
+            print("<color=green>æ›´æ–°äº‹ä»¶</color>");
         }
         #endregion
     }

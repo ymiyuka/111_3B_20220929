@@ -1,31 +1,50 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 namespace YO
 {
     /// <summary>
-    /// ¾Ç²ßÄæ¦ì Learn Field
+    /// å­¸ç¿’æ¬„ä½ Learn Field
     /// </summary>
     public class LearnField : MonoBehaviour
     {
-        // Äæ¦ì Field¡GÀx¦s¸ê®Æ
-        // »yªk
-        // ­×¹¢µü ¸ê®ÆÃş«¬ Äæ¦ì¦WºÙ¡F
-        // ­×¹¢µü¡G³]©w¸ê®ÆÅv­­
-        // ¨p¤H¡Gprivate¡A¶È¦b¦¹Ãş§O¤º¯à°÷¦s¨ú
+        // æ¬„ä½ Fieldï¼šå„²å­˜è³‡æ–™
+        // èªæ³•
+        // ä¿®é£¾è© è³‡æ–™é¡å‹ æ¬„ä½åç¨±ï¼›
+        // ä¿®é£¾è©ï¼šè¨­å®šè³‡æ–™æ¬Šé™
+        // ç§äººï¼šprivateï¼Œåƒ…åœ¨æ­¤é¡åˆ¥å…§èƒ½å¤ å­˜å–
         private int lv;
 
-        // µ¥©ó «ü©w²Å¸¹¡G±Nµ¥©ó¥kÃäªºµ²ªG«ü©wµ¹¥ªÃä
-        // ¤½¶}¡Gpublic¡A©Ò¦³Ãş§O³£¯à°÷¦s¨ú¡AÅã¥Ü
+        // ç­‰æ–¼ æŒ‡å®šç¬¦è™Ÿï¼šå°‡ç­‰æ–¼å³é‚Šçš„çµæœæŒ‡å®šçµ¦å·¦é‚Š
+        // å…¬é–‹ï¼špublicï¼Œæ‰€æœ‰é¡åˆ¥éƒ½èƒ½å¤ å­˜å–ï¼Œé¡¯ç¤º
         public int enemy = 5;
-        //¾ã¼Æ int 
+        // æ•´æ•¸ int 
         public int hp = 100;
-        //¯BÂI¼Æ float
+        // æµ®é»æ•¸ float
         public float speed = 3.5f;
-        //¦r¦ê string
-        public string nameplayer = "¨U¼w";
-        public string content = "«¢Åo";
-        //¥¬ªL­È
+        // å­—ä¸² string
+        public string nameplayer = "æ²ƒå¾·";
+        public string content = "å“ˆå›‰";
+        // å¸ƒæ—å€¼
         public bool isPass = true;
         public bool isDead = false;
+
+        // æç¤º
+        [Header("æ­¦å™¨æ•¸é‡")]
+        public int weaponcount = 10;
+        [Tooltip("è£œ100æ»´HPçš„è—¥æ°´")]
+        public string propName = "ç´…è‰²è—¥æ°´";
+
+        // ç¯„åœ
+        [Range(0, 60)]
+        public int score = 60;
+        [Range(0, 5)]
+        public float walkSpeed = 3.5f;
+        [Range(1, 7)]
+        public string nameWeapon = "æ‰“ç«æ©Ÿ"; // ç„¡æ•ˆ
+
+        // åºåˆ—åŒ–è³‡æ–™
+        [SerializeField]
+        private string password = "a1234"; // é¡¯ç¤ºç§äººåŒ–è³‡æ–™
+
     }
 }
