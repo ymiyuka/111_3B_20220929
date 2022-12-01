@@ -1,11 +1,11 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 namespace yo
 {
     /// <summary>
-    /// ­µ®ÄºŞ²z®ğ
+    /// éŸ³æ•ˆç®¡ç†æ°£
     /// </summary>
-    /// ®M¥Îµ{¦¡®É°õ¦æ : ­n²y­û«Ø(Ãş«¬(¤¸¥ó)) - ²Ä¤@¦¸®M¥Î¸}¥»µ¹ª«¥ó®É·|²K¥[¤¸¥ó
+    /// å¥—ç”¨ç¨‹å¼æ™‚åŸ·è¡Œ : è¦çƒå“¡å»º(é¡å‹(å…ƒä»¶)) - ç¬¬ä¸€æ¬¡å¥—ç”¨è…³æœ¬çµ¦ç‰©ä»¶æ™‚æœƒæ·»åŠ å…ƒä»¶
     [RequireComponent(typeof(AudioSource))]
     public class SoundManager : MonoBehaviour
     {
@@ -21,7 +21,7 @@ namespace yo
         }
 
         /// <summary>
-        /// ¼½©ñ­µ®Ä
+        /// æ’­æ”¾éŸ³æ•ˆ
         /// </summary>
         /// <param name="sound"></param>
         /// <param name="rangeVolume"></param>

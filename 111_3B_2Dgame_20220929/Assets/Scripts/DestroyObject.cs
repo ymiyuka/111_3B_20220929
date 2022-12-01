@@ -1,29 +1,29 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 namespace yo
 {
     /// <summary>
-    /// §R°£ª«¥ó
+    /// åˆªé™¤ç‰©ä»¶
     /// </summary>
     public class DestroyObject : MonoBehaviour
     {
-        [SerializeField, Header("§R°£®É¶¡"), Range(0, 3)]
+        [SerializeField, Header("åˆªé™¤æ™‚é–“"), Range(0, 3)]
         private float destryTime = 0.4f;
 
         private void Awake()
         {
-            //gameObject ¦¹¸}¥»ªº¹CÀ¸ª«¥ó
-            //§R°£(ª«¥ó¡B§R°£®É¶¡)
+            //gameObject æ­¤è…³æœ¬çš„éŠæˆ²ç‰©ä»¶
+            //åˆªé™¤(ç‰©ä»¶ã€åˆªé™¤æ™‚é–“)
             Destroy(gameObject, destryTime);
         }
 
-        //¥i¨£¨Æ¥ó : ·í´è¬V¤¸¥ó (Randerer) ¥X²{¦b Scene ©Î Game ®É°õ¦æ¤@¦¸
+        //å¯è¦‹äº‹ä»¶ : ç•¶æ¸²æŸ“å…ƒä»¶ (Randerer) å‡ºç¾åœ¨ Scene æˆ– Game æ™‚åŸ·è¡Œä¸€æ¬¡
         private void OnBecameVisible()
         {
             
         }
 
-        //¤£¥i¨£ª«¥ó ·í´è¬Vª«¥ó (Randerer) ®ø¥¢¦b Scene ©Î Game ®É°õ¦æ¤@¦¸
+        //ä¸å¯è¦‹ç‰©ä»¶ ç•¶æ¸²æŸ“ç‰©ä»¶ (Randerer) æ¶ˆå¤±åœ¨ Scene æˆ– Game æ™‚åŸ·è¡Œä¸€æ¬¡
         private void OnBecameInvisible()
         {
             Destroy(gameObject);

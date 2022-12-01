@@ -155,7 +155,7 @@ ConstantForce2D:
   m_GameObject: {fileID: 8645172656657845264}
   m_Enabled: 1
   m_Force: {x: 0, y: 0}
-  m_RelativeForce: {x: 5, y: 0}
+  m_RelativeForce: {x: 10, y: 0}
   m_Torque: 0
 --- !u!114 &-3929077484679996212
 MonoBehaviour:

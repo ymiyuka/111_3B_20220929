@@ -1,47 +1,47 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 namespace yo
 {
     /// <summary>
-    /// ¶Ë®`¨t²Î
+    /// å‚·å®³ç³»çµ±
     /// </summary>
     public class DamageSystem : MonoBehaviour
     {
-        [SerializeField, Header("Ãz¬µ¹w»sª«")]
+        [SerializeField, Header("çˆ†ç‚¸é è£½ç‰©")]
         private GameObject prefabExplosion;
-        [SerializeField, Header("¸I¨ì·|Ãz¬µªº¦WºÙ")]
+        [SerializeField, Header("ç¢°åˆ°æœƒçˆ†ç‚¸çš„åç¨±")]
         private string nameTarget;
-        [Header("¨ü¶Ë»PÃz¬µ­µ®Ä")]
+        [Header("å—å‚·èˆ‡çˆ†ç‚¸éŸ³æ•ˆ")]
         [SerializeField]
         private AudioClip soundHit;
         [SerializeField]
         private AudioClip soundExplosion;
 
-        //¸I¼²¶}©l®É°õ¦æ¤@¦¸
+        //ç¢°æ’é–‹å§‹æ™‚åŸ·è¡Œä¸€æ¬¡
         private void OnCollisionEnter2D(Collision2D collision)
         {
             print(collision.gameObject.name);
 
-            //¦pªG ¸I¨ìªºª««~¦WºÙ ¥]§t nameTarget ´NÃz¬µ¨Ã§R°£
+            //å¦‚æœ ç¢°åˆ°çš„ç‰©å“åç¨± åŒ…å« nameTarget å°±çˆ†ç‚¸ä¸¦åˆªé™¤
             if (collision.gameObject.name.Contains(nameTarget))
             {
-                // ¥Í¦¨Ãz¬µ¹w»sª« ®y¼Ğ»P¨¤«× ¸ò¦¹ª««~¬Û¦P
+                // ç”Ÿæˆçˆ†ç‚¸é è£½ç‰© åº§æ¨™èˆ‡è§’åº¦ è·Ÿæ­¤ç‰©å“ç›¸åŒ
                 Instantiate(prefabExplosion, transform.position, transform.rotation);
 
                 SoundManager.instance.PlaySound(soundHit, new Vector2(0.7f, 0.9f));
                 SoundManager.instance.PlaySound(soundExplosion, new Vector2(1.2f, 1.5f));
 
-                // §R°£ Destroy
-                // ¦¹ª«¥ó gameObject
+                // åˆªé™¤ Destroy
+                // æ­¤ç‰©ä»¶ gameObject
                 Destroy(gameObject);
             }
         }
-        //¸I¼²Â÷¶}®É°õ¦æ¤@¦¸
+        //ç¢°æ’é›¢é–‹æ™‚åŸ·è¡Œä¸€æ¬¡
         private void OnTriggerExit2D(Collider2D collision)
         {
             
         }
-        //¸I¼²«ùÄò°õ¦æ
+        //ç¢°æ’æŒçºŒåŸ·è¡Œ
         private void OnCollisionStay2D(Collision2D collision)
         {
             

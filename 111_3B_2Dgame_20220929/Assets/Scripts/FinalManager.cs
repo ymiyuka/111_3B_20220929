@@ -1,32 +1,73 @@
-using TMPro;
+ï»¿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 namespace yo
 {
     /// <summary>
-    /// µ²§ôºŞ²z®ğ
+    /// çµæŸç®¡ç†æ°£
     /// </summary>
     public class FinalManager : MonoBehaviour
     {
+        public static FinalManager instance;
+
         /// <summary>
-        /// µ²§ôµe¥¬
+        /// çµæŸç•«å¸ƒ
         /// </summary>
         private CanvasGroup groupFinal;
         /// <summary>
-        /// µ²§ô¼ĞÃD
+        /// çµæŸæ¨™é¡Œ
         /// </summary>
         private TextMeshProUGUI textTiele;
         /// <summary>
-        /// ­«·s¹CÀ¸
+        /// é‡æ–°éŠæˆ²
         /// </summary>
         private Button btnReplay;
 
         private void Awake()
         {
-            groupFinal = GameObject.Find("µ²§ôµe¥¬").GetComponent<CanvasGroup>();
-            textTiele = GameObject.Find("µ²§ô¼ĞÃD").GetComponent<TextMeshProUGUI>();
-            btnReplay = GameObject.Find("­«·s¹CÀ¸").GetComponent<Button>();
+            instance = this;
+
+            groupFinal = GameObject.Find("çµæŸç•«å¸ƒ").GetComponent<CanvasGroup>();
+            textTiele = GameObject.Find("çµæŸæ¨™é¡Œ").GetComponent<TextMeshProUGUI>();
+            btnReplay = GameObject.Find("é‡æ–°éŠæˆ²").GetComponent<Button>();
+            btnReplay.onClick.AddListener(Replay);
+        }
+
+        /// <summary>
+        /// éŠæˆ²çµæŸ
+        /// </summary>
+        /// <param name="title"></param>
+        public void GameOver(string title)
+        {
+            textTiele.text = title;
+            StartCoroutine(FadeIn());
+        }
+
+        /// <summary>
+        /// æ·¡å…¥
+        /// </summary>
+        /// <returns></returns>
+        private IEnumerator FadeIn()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                groupFinal.alpha += 0.1f;
+                yield return new WaitForSeconds(0.2f);
+            }
+
+            groupFinal.interactable = true;
+            groupFinal.blocksRaycasts = true;
+        }
+
+        /// <summary>
+        /// é–‹é ­é¸å–®
+        /// </summary>
+        private void Replay()
+        {
+            SceneManager.LoadScene("é–‹é ­é¸å–®");
         }
     }
 }

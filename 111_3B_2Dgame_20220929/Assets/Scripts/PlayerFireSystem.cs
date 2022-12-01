@@ -1,17 +1,17 @@
-
+ï»¿
 using UnityEngine;
 
 namespace yo
 {
     /// <summary>
-    /// ª±®aµo®g¨t²Î
+    /// ç©å®¶ç™¼å°„ç³»çµ±
     /// </summary>
     public class PlayerFireSystem : FireSystem
     {
 
         private void Update()
         {
-            //¦pªG ª±®a«ö¤U ªÅ¥Õ«Ø ´N¥Í¦¨¤l¼u
+            //å¦‚æœ ç©å®¶æŒ‰ä¸‹ ç©ºç™½å»º å°±ç”Ÿæˆå­å½ˆ
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 SpawnBullet();

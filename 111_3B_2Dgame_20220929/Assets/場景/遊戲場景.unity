@@ -530,11 +530,12 @@ GameObject:
   m_Component:
   - component: {fileID: 734709940}
   - component: {fileID: 734709939}
-  - component: {fileID: 734709943}
-  - component: {fileID: 734709945}
   - component: {fileID: 734709942}
   - component: {fileID: 734709941}
+  - component: {fileID: 734709945}
+  - component: {fileID: 734709943}
   - component: {fileID: 734709946}
+  - component: {fileID: 734709947}
   m_Layer: 3
   m_Name: "\u73A9\u5BB6"
   m_TagString: Untagged
@@ -696,6 +697,18 @@ MonoBehaviour:
   prefaBullet: {fileID: 8645172656657845264, guid: 1419482deae0b564ea96bb58e12facdb, type: 3}
   pointSpawn: {fileID: 1534662869}
   soundFire: {fileID: 8300000, guid: 5f3b12efe1cd3402cb905001e349e8aa, type: 3}
+--- !u!114 &734709947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734709938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0de7cab1bc8f9345ba79b5c62ba8a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &782651844
 GameObject:
   m_ObjectHideFlags: 0

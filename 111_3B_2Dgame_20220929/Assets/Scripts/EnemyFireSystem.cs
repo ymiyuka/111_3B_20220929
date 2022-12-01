@@ -1,19 +1,19 @@
-
+ï»¿
 using UnityEngine;
 
 namespace yo
 {
     /// <summary>
-    /// ¼Ä¤Hµo®g¨t²Î
+    /// æ•µäººç™¼å°„ç³»çµ±
     /// </summary>
     public class EnemyFireSystem : FireSystem
     {
-        [SerializeField, Header("¥Í¦¨¤l¼u®É¶¡"), Range(0, 3)]
+        [SerializeField, Header("ç”Ÿæˆå­å½ˆæ™‚é–“"), Range(0, 3)]
         private float interval = 1.5f;
 
         private void Awake()
         {
-            //©I¥s¤èªk
+            //å‘¼å«æ–¹æ³•
             //SpawnBullet();
 
 
@@ -21,7 +21,7 @@ namespace yo
 
         private void OnBecameVisible()
         {
-            //©µ¿ğ­«½Æ©I¥s("¤èªk¦WºÙ"¡A©µ¿ğ®É¶¡¡A­«½ÆÀW²v)
+            //å»¶é²é‡è¤‡å‘¼å«("æ–¹æ³•åç¨±"ï¼Œå»¶é²æ™‚é–“ï¼Œé‡è¤‡é »ç‡)
             InvokeRepeating("SpawnBullet", 0, interval);
         }
 
