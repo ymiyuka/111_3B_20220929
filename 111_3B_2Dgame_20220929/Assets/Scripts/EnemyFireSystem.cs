@@ -16,8 +16,18 @@ namespace yo
             //呼叫方法
             //SpawnBullet();
 
+
+        }
+
+        private void OnBecameVisible()
+        {
             //延遲重複呼叫("方法名稱"，延遲時間，重複頻率)
             InvokeRepeating("SpawnBullet", 0, interval);
+        }
+
+        private void OnBecameInvisible()
+        {
+            Destroy(gameObject);
         }
     }
 }
